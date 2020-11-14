@@ -98,3 +98,18 @@ function mostrarDivContenedorResultados(){
 
     $divContenedorResultados.className = "";
 }
+
+
+
+$botonCalcular.onclick = function (){
+
+
+    calcularMayorEdad();
+    calcularMenorEdad();
+    calcularPromedioEdad();
+    mostrarDivContenedorResultados();
+
+
+   
+}
+
