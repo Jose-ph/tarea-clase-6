@@ -80,3 +80,13 @@ function vaciarDivIntegrantes (evento){
 
     $divPadre.innerHTML = "";
 }
+
+
+function mostrarBotonCalcular (evento){
+
+    const $botonCalcular = document.querySelector('#boton-calcular');
+
+    $botonCalcular.className = "";
+
+
+} 
