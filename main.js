@@ -70,3 +70,13 @@ function crearIntegrantes (integrante) {
     
 
     }
+
+
+
+function vaciarDivIntegrantes (evento){
+
+
+    let $divPadre = document.querySelector('#integrantes-creados');
+
+    $divPadre.innerHTML = "";
+}
