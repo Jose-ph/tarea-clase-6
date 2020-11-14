@@ -90,3 +90,11 @@ function mostrarBotonCalcular (evento){
 
 
 } 
+
+
+function mostrarDivContenedorResultados(){
+
+    const $divContenedorResultados = document.querySelector('#contenedor-resultados');
+
+    $divContenedorResultados.className = "";
+}
