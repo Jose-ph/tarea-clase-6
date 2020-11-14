@@ -1,0 +1,17 @@
+.oculto {
+
+    display: none;
+
+
+}
+
+ #integrantes-creados {
+
+    display: grid;
+    
+    grid-template-rows: auto;
+
+    
+
+
+ }   
