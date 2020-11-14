@@ -27,5 +27,34 @@ function calcularMayorEdad (edades){
   
   }
 
+
+function calcularMenorEdad (edades){
+
+
+    let $valoresEdad = document.querySelectorAll('.nuevo-integrante');
+  
+    let menorEdad = Number( $valoresEdad[0].value);
+  
+    let $menorEdad = document.querySelector('#menor');
+  
+    for (i = 0 ; i <$valoresEdad.length ; i++){
+  
+      
+  
+      if (menorEdad > Number( $valoresEdad[i].value)){
+  
+        menorEdad = Number( $valoresEdad[i].value)
+      }
+  
+  
+    }
+     
+    return   $menorEdad. textContent = 'La menor edad es ' + menorEdad;
+  
+  
+  
+  }
+  
+
   
   
