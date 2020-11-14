@@ -32,3 +32,41 @@ $botonSiguiente.onclick = function(){
 
 
 }
+
+
+
+
+
+
+function crearIntegrantes (integrante) {
+
+    let numeroDeIntegrante = integrante;
+    let $divPadre = document.querySelector('#integrantes-creados');
+
+    let nuevoLabel = document.createElement('label');
+
+    nuevoLabel.setAttribute('class', 'etiqueta')
+
+    nuevoLabel.innerText = 'Ingrese la edad del integrante N°' + numeroDeIntegrante;
+
+    let nuevoInput = document.createElement('input');
+
+    nuevoInput.setAttribute('type', 'number');
+    nuevoInput.setAttribute('min', '0');
+    nuevoInput.setAttribute ('class', 'nuevo-integrante');
+    
+
+    
+    nuevoLabel.appendChild(nuevoInput);
+    $divPadre.appendChild(nuevoLabel);
+    
+
+
+
+    return $divPadre.appendChild(nuevoLabel);
+
+    
+
+    
+
+    }
