@@ -70,26 +70,3 @@ function crearIntegrantes (integrante) {
     
 
     }
-
-
-
-
-
-function vaciarDivIntegrantes (evento){
-
-
-    let $divPadre = document.querySelector('#integrantes-creados');
-
-    $divPadre.innerHTML = "";
-}
-
-
-
-function mostrarBotonCalcular (evento){
-
-    const $botonCalcular = document.querySelector('#boton-calcular');
-
-    $botonCalcular.className = "";
-
-
-} 
