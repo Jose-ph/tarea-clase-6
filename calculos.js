@@ -1,3 +1,7 @@
+
+
+//Agregar en el main, para mostrar estos resultados
+
 function calcularMayorEdad (edades){
 
 
@@ -31,25 +35,25 @@ function calcularMayorEdad (edades){
 function calcularMenorEdad (edades){
 
 
-    let $valoresEdad = document.querySelectorAll('.nuevo-integrante');
+    let $edades = document.querySelectorAll('integrante');
   
     let menorEdad = Number( $valoresEdad[0].value);
   
     let $menorEdad = document.querySelector('#menor');
   
-    for (i = 0 ; i <$valoresEdad.length ; i++){
+    for (i = 0 ; i <$edades.length ; i++){
   
       
   
-      if (menorEdad > Number( $valoresEdad[i].value)){
+      if (menorEdad > Number( $edades[i].value)){
   
-        menorEdad = Number( $valoresEdad[i].value)
+        menorEdad = Number( $edades[i].value)
       }
   
   
     }
      
-    return   $menorEdad. textContent = 'La menor edad es ' + menorEdad;
+    return   menorEdad;
   
   
   
@@ -59,7 +63,7 @@ function calcularMenorEdad (edades){
   
 function calcularPromedioEdad(edades){
 
-    let $valoresEdad = document.querySelectorAll('.nuevo-integrante');
+    let $edades = document.querySelectorAll('integrante');
   
     let $promedioEdad = document.querySelector('#promedio');
   
@@ -68,11 +72,11 @@ function calcularPromedioEdad(edades){
     let promedioEdades = 0;
   
   
-    for (i = 0 ; i <$valoresEdad.length ; i++){
+    for (i = 0 ; i <$edades.length ; i++){
   
-      if($valoresEdad.length > 0){
+      if(edades.length > 0){
   
-      sumaEdades = sumaEdades + Number( $valoresEdad[i].value)
+      sumaEdades = sumaEdades + Number( $edades[i].value)
   
       
       }
@@ -80,12 +84,12 @@ function calcularPromedioEdad(edades){
    
   
       
-   //
+   
     }
   
-    promedioEdades = sumaEdades/ $valoresEdad.length;
+    promedioEdades = sumaEdades/ $edades.length;
   
-    return $promedioEdad.textContent = 'El promedio de edad del grupo familiar es ' + promedioEdades;
+    return promedioEdades;
   } 
 
   
