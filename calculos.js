@@ -9,15 +9,15 @@ function calcularMayorEdad (edades){
   
     let mayorEdad = Number($edades[0].value);
   
-    let $mayorEdad = document.querySelector('#mayor');
+    //let $mayorEdad = document.querySelector('#mayor'); Esto debe ser usado en otro lugar
   
     for (i = 0 ; i <$edades.length ; i++){
   
-      
+      let edadComparar = Number( $edades[i].value);
   
-      if (mayorEdad < Number( $edades[i].value)){
+      if (mayorEdad < edadComparar ){
   
-        mayorEdad = Number( $edades[i].value);
+        mayorEdad = edadComparar;
       }
   
   
@@ -39,15 +39,15 @@ function calcularMenorEdad (edades){
   
     let menorEdad = Number( $edades[0].value);
   
-    let $menorEdad = document.querySelector('#menor');
+   // let $menorEdad = document.querySelector('#menor');
   
     for (i = 0 ; i <$edades.length ; i++){
   
-      
+      let edadComparar = Number( $edades[i].value);
   
-      if (menorEdad > Number( $edades[i].value)){
+      if (menorEdad > edadComparar){
   
-        menorEdad = Number( $edades[i].value)
+        menorEdad = edadComparar;
       }
   
   
@@ -64,8 +64,10 @@ function calcularMenorEdad (edades){
 function calcularPromedioEdad(edades){
 
     let $edades = document.querySelectorAll('.integrante');
+
+    
   
-    let $promedioEdad = document.querySelector('#promedio');
+    //let $promedioEdad = document.querySelector('#promedio');
   
     let sumaEdades = 0;
   
@@ -73,10 +75,12 @@ function calcularPromedioEdad(edades){
   
   
     for (i = 0 ; i <$edades.length ; i++){
+
+      let edadComparar = Number($edades[i].value);
   
       if($edades.length > 0){
   
-      sumaEdades = sumaEdades + Number( $edades[i].value)
+      sumaEdades = sumaEdades + edadComparar;
   
       
       }
