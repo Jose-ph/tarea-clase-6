@@ -1,25 +1,25 @@
 function calcularMayorEdad (edades){
 
 
-    let $valoresEdad = document.querySelectorAll('.nuevo-integrante');
+    let $edades = document.querySelectorAll('integrante'); 
   
-    let mayorEdad = Number( $valoresEdad[0].value);
+    let mayorEdad = Number( $edades[0].value);
   
     let $mayorEdad = document.querySelector('#mayor');
   
-    for (i = 0 ; i <$valoresEdad.length ; i++){
+    for (i = 0 ; i <$edades.length ; i++){
   
       
   
-      if (mayorEdad < Number( $valoresEdad[i].value)){
+      if (mayorEdad < Number( $edades[i].value)){
   
-        mayorEdad = Number( $valoresEdad[i].value)
+        mayorEdad = Number( $valoresEdad[i].value);
       }
   
   
     }
      
-    return   $mayorEdad. textContent = 'La mayor edad es ' + mayorEdad;
+    return   mayorEdad;
   
     
   

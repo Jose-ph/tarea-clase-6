@@ -53,7 +53,7 @@ function crearIntegrantes (integrante) {
 
     nuevoInput.setAttribute('type', 'number');
     nuevoInput.setAttribute('min', '0');
-    nuevoInput.setAttribute ('class', 'nuevo-integrante');
+    nuevoInput.setAttribute ('class', 'integrante');
     
 
     
