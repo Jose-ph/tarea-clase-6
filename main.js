@@ -3,7 +3,7 @@ const $botonSiguiente = document.querySelector('#boton-siguiente');
 
 const $botonCalcular = document.querySelector('#boton-calcular');
 
-$botonSiguiente.onclick = function(){
+$botonSiguiente.onclick = function(event){
 
 
     const $botonCalcular = document.querySelector('#boton-calcular');
@@ -29,7 +29,7 @@ $botonSiguiente.onclick = function(){
 
 
 
-
+    event.preventDefault();
 
 }
 
