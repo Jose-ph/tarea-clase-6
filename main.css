@@ -24,10 +24,13 @@
  }
 
 
- #nuevo-label{
+ #etiqueta{
 
    display: grid;
     
     grid-template-rows: auto;
 
+    width: 50px;
+
  }
+ 

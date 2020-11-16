@@ -204,7 +204,7 @@ function crearLabelSalario(){
 
     let $nuevoLabel = document.createElement('label');
 
-    $nuevoLabel.setAttribute('id', 'label-salario');
+    $nuevoLabel.setAttribute('id', 'etiqueta');
 
     $nuevoLabel.innerText = 'Ingrese el salario anual del integrante';
 
@@ -262,7 +262,7 @@ $botonSiguienteDos.onclick = function(event){
 
         $botonQuitar.onclick = function(){
 
-            let $nuevoLabel = document.querySelector('#label-salario');
+            let $nuevoLabel = document.querySelector('#etiqueta');
 
             $padre.removeChild($nuevoLabel);
         }
