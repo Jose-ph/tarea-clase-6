@@ -179,23 +179,78 @@ function resetear(event){
 
 $botonResetear.onclick = resetear;
 
+
+function mostrarBotonAgregar(){
+
+    let $botonAgregar = document.querySelector('#boton-agregar');
+
+    $botonAgregar.className = "";
+
+
+}
+
+function mostrarBotonQuitar(){
+
+    let $botonQuitar = document.querySelector('#boton-quitar');
+    
+    $botonQuitar.className = "";
+
+}
+
+
+function crearLabelSalario(){
+
+    
+
+    let $nuevoLabel = document.createElement('label');
+
+    $nuevoLabel.setAttribute('id', 'label-salario');
+
+    $nuevoLabel.innerText = 'Ingrese el salario anual del integrante';
+
+    let $inputSalario = document.createElement('input');
+
+
+    $inputSalario.setAttribute ('type' , 'number');
+    $inputSalario.setAttribute('class' , 'salario');
+    $inputSalario.setAttribute('min' , '0');
+
+    $nuevoLabel.appendChild($inputSalario);
+
+
+    return $nuevoLabel;
+    
+
+
+}
+
+
+
+
 $botonSiguienteDos.onclick = function(event){
 
-    let $respuestaUsuario = document.querySelector('#respuesta').toLowerCase();
+    let $respuestaUsuario = document.querySelector('#respuesta').value;
     let $botonAgregar = document.querySelector('#boton-agregar');
     let $botonQuitar = document.querySelector('#boton-quitar');
     
+    let $padre = document.querySelector('#contenedor-trabajadores');
+
+    
 
     if ($respuestaUsuario === 'si'){
+
+        console.log('La respuesta fue SI');
 
         mostrarBotonAgregar();
         mostrarBotonQuitar();
 
         $botonAgregar.onclick = function(){
 
+            
+
             crearLabelSalario();
 
-
+            $padre.appendChild(crearLabelSalario());
 
 
 
@@ -203,7 +258,9 @@ $botonSiguienteDos.onclick = function(event){
 
         $botonQuitar.onclick = function(){
 
-            eliminarLabelSalario();
+            let $nuevoLabel = document.querySelector('#label-salario');
+
+            $padre.removeChild($nuevoLabel);
         }
 
 
@@ -217,5 +274,5 @@ $botonSiguienteDos.onclick = function(event){
 
 
 
-    event.preventDefault();
+     event.preventDefault();
 }

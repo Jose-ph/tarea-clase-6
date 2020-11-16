@@ -22,3 +22,12 @@
 
     background-color: #a7c9ef;
  }
+
+
+ #nuevo-label{
+
+   display: grid;
+    
+    grid-template-rows: auto;
+
+ }
