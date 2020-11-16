@@ -124,3 +124,41 @@ $botonCalcular.onclick = function (){
    
 }
 
+
+
+function ocultarBotonCalcular(){
+
+
+    const $botonCalcular = document.querySelector('#boton-calcular');
+
+    $botonCalcular.className = ".oculto";
+
+
+}
+
+
+
+function borrarIntegrantes(){
+
+    let $inputIntegrantes = document.querySelector('#numero-integrantes').value;
+
+
+
+    return  $inputIntegrantes.innerText = "";
+}
+
+
+function resetear(event){
+
+    eliminarIntegrantesAnteriores();
+    ocultarBotonCalcular();
+    ocultarResultados();
+    borrarIntegrantes();
+
+
+
+
+
+
+
+}
