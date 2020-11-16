@@ -224,7 +224,11 @@ function crearLabelSalario(){
 
 }
 
+function redireccionar (){
 
+
+    return window.location.href = "https://argentinaprograma.com/";
+ }
 
 
 $botonSiguienteDos.onclick = function(event){
@@ -264,6 +268,17 @@ $botonSiguienteDos.onclick = function(event){
         }
 
 
+    } else if($respuestaUsuario === 'no'){
+
+        alert('Conozco a un grupo de personas que resuelven problemas (de programación)')
+
+        
+
+        setTimeout( redireccionar , 5000);
+
+
+
+        
     }
 
 
