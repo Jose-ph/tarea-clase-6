@@ -1,6 +1,8 @@
 
 const $botonSiguiente = document.querySelector('#boton-siguiente');
 
+const $botonSiguienteDos = document.querySelector('#boton-siguiente-2');
+
 const $botonCalcular = document.querySelector('#boton-calcular');
 
 let $divPadre = document.querySelector('#integrantes-creados');
@@ -176,3 +178,44 @@ function resetear(event){
 
 
 $botonResetear.onclick = resetear;
+
+$botonSiguienteDos.onclick = function(event){
+
+    let $respuestaUsuario = document.querySelector('#respuesta').toLowerCase();
+    let $botonAgregar = document.querySelector('#boton-agregar');
+    let $botonQuitar = document.querySelector('#boton-quitar');
+    
+
+    if ($respuestaUsuario === 'si'){
+
+        mostrarBotonAgregar();
+        mostrarBotonQuitar();
+
+        $botonAgregar.onclick = function(){
+
+            crearLabelSalario();
+
+
+
+
+
+        }
+
+        $botonQuitar.onclick = function(){
+
+            eliminarLabelSalario();
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    event.preventDefault();
+}
