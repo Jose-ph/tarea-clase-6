@@ -11,7 +11,6 @@ let $botonResetear = document.querySelector('#boton-resetear');
 
 $botonSiguiente.onclick = function(event){
 
-
     let $divPadre = document.querySelector('#integrantes-creados');
     const $botonCalcular = document.querySelector('#boton-calcular');
     let numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
@@ -37,10 +36,6 @@ $botonSiguiente.onclick = function(event){
     event.preventDefault();
 
 }
-
-
-
-
 
 
 function crearIntegrante (indice) {
@@ -69,12 +64,9 @@ function crearIntegrante (indice) {
 
     return nuevoLabel;
 
-    
 
-    
 
     }
-
 
 
 function eliminarIntegrantesAnteriores (){
@@ -103,7 +95,20 @@ function mostrarResultados(){
     $contenedorResultados.className = "";
 }
 
+function mostrarTrabajadores(){
 
+    let $contenedorTrabajaores = document.querySelector('#contenedor-trabajadores');
+
+    $contenedorTrabajaores.className= "";
+}
+
+function ocultarTrabajadores(){
+
+    let $contenedorTrabajaores = document.querySelector('#contenedor-trabajadores');
+
+    $contenedorTrabajaores.className= "oculto";
+
+}
 
 $botonCalcular.onclick = function (){
 
@@ -121,11 +126,11 @@ $botonCalcular.onclick = function (){
     $promedioEdad.innerText = 'El promedio de edad es ' + calcularPromedioEdad($edadesIntegrantes);
 
     mostrarResultados();
+    mostrarTrabajadores();
 
 
    
 }
-
 
 
 function ocultarBotonCalcular(){
@@ -148,7 +153,6 @@ function ocultarResultados(){
 }
 
 
-
 function borrarIntegrantes(){
 
     let $inputIntegrantes = document.querySelector('#numero-integrantes').value = "";
@@ -165,11 +169,7 @@ function resetear(event){
     ocultarBotonCalcular();
     ocultarResultados();
     borrarIntegrantes();
-
-
-
-
-
+    ocultarTrabajadores();
 
 
 }
