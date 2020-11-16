@@ -3,6 +3,8 @@ const $botonSiguiente = document.querySelector('#boton-siguiente');
 
 const $botonCalcular = document.querySelector('#boton-calcular');
 
+let $divPadre = document.querySelector('#integrantes-creados');
+
 $botonSiguiente.onclick = function(event){
 
 
@@ -41,7 +43,7 @@ $botonSiguiente.onclick = function(event){
 function crearIntegrante (indice) {
 
     let indiceDeIntegrante = indice;
-    let $divPadre = document.querySelector('#integrantes-creados');
+    
 
     let nuevoLabel = document.createElement('label');
 
@@ -58,7 +60,6 @@ function crearIntegrante (indice) {
 
     
     nuevoLabel.appendChild(nuevoInput);
-    $divPadre.appendChild(nuevoLabel);
     
 
 
@@ -73,12 +74,12 @@ function crearIntegrante (indice) {
 
 
 
-function eliminarIntegrantesAnteriores (evento){
+function eliminarIntegrantesAnteriores (){
 
 
-    let $divPadre = document.querySelector('#integrantes-creados');
+    let $divPadre = document.querySelector('#integrantes-creados').innerHTML = "";
 
-    $divPadre.innerHTML = "";
+    
 }
 
 
@@ -92,7 +93,7 @@ function mostrarBotonCalcular (evento){
 } 
 
 
-function mostrarDivContenedorResultados(){
+function mostrarResultados(){
 
     const $divContenedorResultados = document.querySelector('#contenedor-resultados');
 
@@ -107,7 +108,7 @@ $botonCalcular.onclick = function (){
     calcularMayorEdad();
     calcularMenorEdad();
     calcularPromedioEdad();
-    mostrarDivContenedorResultados();
+    mostrarResultados();
 
 
    
