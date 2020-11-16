@@ -151,11 +151,11 @@ function ocultarResultados(){
 
 function borrarIntegrantes(){
 
-    let $inputIntegrantes = document.querySelector('#numero-integrantes').value;
+    let $inputIntegrantes = document.querySelector('#numero-integrantes').value = "";
 
+    return $inputIntegrantes;
 
-
-    return  $inputIntegrantes.innerText = 0;
+     
 }
 
 
