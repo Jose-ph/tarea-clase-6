@@ -5,6 +5,8 @@ const $botonCalcular = document.querySelector('#boton-calcular');
 
 let $divPadre = document.querySelector('#integrantes-creados');
 
+let $edades = document.querySelectorAll('.integrante'); 
+
 $botonSiguiente.onclick = function(event){
 
 
@@ -94,22 +96,27 @@ function mostrarBotonCalcular (evento){
 
 function mostrarResultados(){
 
-    const $divContenedorResultados = document.querySelector('#contenedor-resultados');
+    const $contenedorResultados = document.querySelector('#contenedor-resultados');
 
-    $divContenedorResultados.className = "";
+    $contenedorResultados.className = "";
 }
 
 
 
 $botonCalcular.onclick = function (){
 
-
-    calcularMayorEdad();
-    calcularMenorEdad();
-    calcularPromedioEdad();
-    mostrarResultados();
+    let $edadesIntegrantes = document.querySelectorAll('.integrante'); 
 
 
+    calcularMayorEdad($edadesIntegrantes);
+    calcularMenorEdad($edadesIntegrantes);
+    calcularPromedioEdad($edadesIntegrantes);
+    mostrarResultados($edadesIntegrantes);
+
+
+    let $mayorEdad = document.querySelector('#mayor'); 
+    let $menorEdad = document.querySelector('#menor');
+    let $promedioEdad = document.querySelector('#promedio');
 
 
    
