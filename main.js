@@ -107,16 +107,18 @@ $botonCalcular.onclick = function (){
 
     let $edadesIntegrantes = document.querySelectorAll('.integrante'); 
 
-
-    calcularMayorEdad($edadesIntegrantes);
-    calcularMenorEdad($edadesIntegrantes);
-    calcularPromedioEdad($edadesIntegrantes);
-    mostrarResultados($edadesIntegrantes);
-
-
     let $mayorEdad = document.querySelector('#mayor'); 
     let $menorEdad = document.querySelector('#menor');
     let $promedioEdad = document.querySelector('#promedio');
+
+
+    $mayorEdad.innerText = 'La mayor edad es ' + calcularMayorEdad($edadesIntegrantes);
+
+    $menorEdad.innerText = 'La menor edad es ' +   calcularMenorEdad($edadesIntegrantes);
+
+    $promedioEdad.innerText = 'El promedio de edad es ' + calcularPromedioEdad($edadesIntegrantes);
+
+    mostrarResultados();
 
 
    
