@@ -270,11 +270,11 @@ $botonSiguienteDos.onclick = function(event){
 
     } else if($respuestaUsuario === 'no'){
 
-        alert('Conozco a un grupo de personas que resuelven problemas (de programación)')
+        alert('Quizás te interese el siguiente curso. Presiona Aceptar y serás redireccionado a la página')
 
         
 
-        setTimeout( redireccionar , 5000);
+        setTimeout( redireccionar , 3000);
 
 
 
