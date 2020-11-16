@@ -8,6 +8,7 @@ let $divPadre = document.querySelector('#integrantes-creados');
 $botonSiguiente.onclick = function(event){
 
 
+    let $divPadre = document.querySelector('#integrantes-creados');
     const $botonCalcular = document.querySelector('#boton-calcular');
     let numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
     let indiceIntegrante = 0
@@ -18,9 +19,7 @@ $botonSiguiente.onclick = function(event){
 
         indiceIntegrante++          
          
-         crearIntegrante(indiceIntegrante);
-         
-
+         $divPadre.appendChild(crearIntegrante(indiceIntegrante));
          
     }
 
@@ -29,7 +28,7 @@ $botonSiguiente.onclick = function(event){
 
     }
 
-
+   
 
     event.preventDefault();
 
@@ -77,7 +76,7 @@ function crearIntegrante (indice) {
 function eliminarIntegrantesAnteriores (){
 
 
-    let $divPadre = document.querySelector('#integrantes-creados').innerHTML = "";
+     document.querySelector('#integrantes-creados').innerHTML = "";
 
     
 }
@@ -109,6 +108,8 @@ $botonCalcular.onclick = function (){
     calcularMenorEdad();
     calcularPromedioEdad();
     mostrarResultados();
+
+
 
 
    
