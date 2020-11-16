@@ -7,6 +7,8 @@ let $divPadre = document.querySelector('#integrantes-creados');
 
 let $edades = document.querySelectorAll('.integrante'); 
 
+let $botonResetear = document.querySelector('#boton-resetear');
+
 $botonSiguiente.onclick = function(event){
 
 
@@ -131,7 +133,16 @@ function ocultarBotonCalcular(){
 
     const $botonCalcular = document.querySelector('#boton-calcular');
 
-    $botonCalcular.className = ".oculto";
+    $botonCalcular.className = "oculto";
+
+
+}
+
+function ocultarResultados(){
+
+    const $contenedorResultados = document.querySelector('#contenedor-resultados');
+
+    $contenedorResultados.className = "oculto";
 
 
 }
@@ -144,7 +155,7 @@ function borrarIntegrantes(){
 
 
 
-    return  $inputIntegrantes.innerText = "";
+    return  $inputIntegrantes.innerText = 0;
 }
 
 
@@ -162,3 +173,6 @@ function resetear(event){
 
 
 }
+
+
+$botonResetear.onclick = resetear;
