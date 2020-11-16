@@ -1,11 +1,10 @@
 
 
-//Agregar en el main, para mostrar estos resultados
 
 function calcularMayorEdad (edades){
 
 
-    let $edades = document.querySelectorAll('.integrante'); 
+    let $edades = edades; 
   
     let mayorEdad = Number($edades[0].value);
   
@@ -34,7 +33,7 @@ function calcularMayorEdad (edades){
 function calcularMenorEdad (edades){
 
 
-    let $edades = document.querySelectorAll('.integrante');
+    let $edades = edades;
   
     let menorEdad = Number( $edades[0].value);
   
@@ -62,8 +61,7 @@ function calcularMenorEdad (edades){
   
 function calcularPromedioEdad(edades){
 
-    let $edades = document.querySelectorAll('.integrante');
-
+    let $edades = edades;
     let sumaEdades = 0;
   
     let promedioEdades = 0;
