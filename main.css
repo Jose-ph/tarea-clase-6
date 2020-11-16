@@ -1,0 +1,24 @@
+.oculto {
+
+    display: none;
+
+
+}
+
+ #integrantes-creados {
+
+    display: grid;
+    
+    grid-template-rows: auto;
+
+    
+
+
+ }   
+
+
+
+ #principal {
+
+    background-color: #a7c9ef;
+ }

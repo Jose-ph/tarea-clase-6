@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>r/argentina-programa Tarea clase 6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+
+
+<body id="principal">
+
+
+    <form  id="formulario">
+
+
+        <label for="Integrantes">Ingresar cantidad integrantes del grupo familiar</label>
+        <input id="numero-integrantes" type="number" min="0">
+
+        <button type="submit" id="boton-siguiente"> Siguiente</button>
+        <button type="button" id="boton-resetear">Resetear</button>
+
+
+        <div id="integrantes-creados">
+
+
+
+
+        </div>
+
+        <input type="button" value="Calcular" id="boton-calcular" class="oculto">
+
+        <div id="contenedor-resultados" class="oculto">
+
+
+            <p id="mayor"> La mayor edad es: </p>
+
+            <p id="menor"> La menor edad es: </p>
+
+            <p id="promedio"> El promedio de edad familiar es de: </p>
+
+
+
+
+        </div>
+
+    </form>
+
+
+
+    <script src='main.js'></script>
+    <script src="calculos.js"></script>
+</body>
+
+
+</html>
