@@ -7,22 +7,22 @@ $botonSiguiente.onclick = function(event){
 
 
     const $botonCalcular = document.querySelector('#boton-calcular');
-    let $numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
-    let integrante = 0
+    let numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
+    let indiceIntegrante = 0
 
-    vaciarDivIntegrantes();
+    eliminarIntegrantesAnteriores();
 
-     while (integrante < $numeroIntegrantes) {
+     while (indiceIntegrante < numeroIntegrantes) {
 
-        integrante++          
+        indiceIntegrante++          
          
-         crearIntegrantes(integrante);
+         crearIntegrante(indiceIntegrante);
          
 
          
     }
 
-    if (integrante > 0){
+    if (indiceIntegrante > 0){
     mostrarBotonCalcular();
 
     }
@@ -38,16 +38,16 @@ $botonSiguiente.onclick = function(event){
 
 
 
-function crearIntegrantes (integrante) {
+function crearIntegrante (indice) {
 
-    let numeroDeIntegrante = integrante;
+    let indiceDeIntegrante = indice;
     let $divPadre = document.querySelector('#integrantes-creados');
 
     let nuevoLabel = document.createElement('label');
 
     nuevoLabel.setAttribute('class', 'etiqueta')
 
-    nuevoLabel.innerText = 'Ingrese la edad del integrante N°' + numeroDeIntegrante;
+    nuevoLabel.innerText = 'Ingrese la edad del integrante N°' + indiceDeIntegrante;
 
     let nuevoInput = document.createElement('input');
 
@@ -63,7 +63,7 @@ function crearIntegrantes (integrante) {
 
 
 
-    return $divPadre.appendChild(nuevoLabel);
+    return nuevoLabel;
 
     
 
@@ -73,7 +73,7 @@ function crearIntegrantes (integrante) {
 
 
 
-function vaciarDivIntegrantes (evento){
+function eliminarIntegrantesAnteriores (evento){
 
 
     let $divPadre = document.querySelector('#integrantes-creados');
