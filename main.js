@@ -232,9 +232,9 @@ function redireccionar (){
 
  function mostrarBotonCalcularSalario(){
 
-    let $botonQuitar = document.querySelector('#boton-quitar');
+    let $botonCalcularSalario = document.querySelector('#calcular-salario');;
     
-    $botonQuitar.className = "";
+    $botonCalcularSalario.className = "";
 
 
  }
