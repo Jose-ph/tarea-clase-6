@@ -277,7 +277,20 @@ $botonSiguienteDos.onclick = function(event){
             $padre.removeChild($nuevoLabel);
         }
 
+        $botonCalcularSalario.onclick = function(){
 
+            let salariosAnuales = document.querySelectorAll('salario');
+
+            let $mayorSalarioAnual = document.querySelector('#mayor-salario-anual');
+            let $menorSalarioAnual = document.querySelector('#menor-salario-anual');
+            let $salarioAnualPromedio = document.querySelector('#promedio-salario-anual');
+            let $salarioMensualPromedio = document.querySelector('#promedio-salario-mensual');
+
+
+
+
+
+        }
     } else if($respuestaUsuario === 'no'){
 
         alert('Quizás te interese el siguiente curso. Presiona Aceptar y serás redireccionado a la página')

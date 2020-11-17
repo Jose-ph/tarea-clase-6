@@ -90,4 +90,31 @@ function calcularPromedioEdad(edades){
   } 
 
   
+  function calcularMayorSalarioAnual(salarios){
+    
+
+
+
+    let $salarios = salarios; 
   
+    let mayorSalarioAnual = Number($salarios[0].value);
+  
+  
+    for (i = 0 ; i <$salarios.length ; i++){
+  
+      let salarioAComparar= Number( $salarios[i].value);
+  
+      if (mayorSalarioAnual< salarioAComparar ){
+  
+        mayorSalarioAnual= salarioAComparar;
+      }
+  
+  
+    }
+     
+    return   mayorSalarioAnual;
+  
+
+
+
+  }
