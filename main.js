@@ -279,12 +279,14 @@ $botonSiguienteDos.onclick = function(event){
 
         $botonCalcularSalario.onclick = function(){
 
-            let salariosAnuales = document.querySelectorAll('salario');
+            let salariosAnuales = document.querySelectorAll('.salario');
 
             let $mayorSalarioAnual = document.querySelector('#mayor-salario-anual');
             let $menorSalarioAnual = document.querySelector('#menor-salario-anual');
             let $salarioAnualPromedio = document.querySelector('#promedio-salario-anual');
             let $salarioMensualPromedio = document.querySelector('#promedio-salario-mensual');
+
+            $mayorSalarioAnual.textContent = 'El mayor salario anual es' + calcularMayorSalarioAnual(salariosAnuales);
 
 
 

@@ -35,7 +35,7 @@ function calcularMenorEdad (edades){
 
     let $edades = edades;
   
-    let menorEdad = Number( $edades[0].value);
+    let menorEdad = Number($edades[0].value);
   
    
   
