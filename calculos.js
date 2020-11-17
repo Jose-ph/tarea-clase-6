@@ -174,7 +174,36 @@ function calcularPromedioEdad(edades){
   } 
 
 
+  function calcularSalarioMensualPromedio (salarios){
 
+    let $salarios = salarios;
+    let sumaSalariosAnuales = 0;
+  
+    let promedioSalariosAnuales = 0;
+  
+  
+    for (i = 0 ; i <$salarios.length ; i++){
+
+      let salarioAnualAComparar = Number($salarios[i].value);
+  
+      if($salarios.length > 0){
+  
+      sumaSalariosAnuales = sumaSalariosAnuales + salarioAnualAComparar;
+  
+      
+      }
+      
+   
+  
+      
+   
+    }
+  
+    promedioSalariosAnuales = sumaSalariosAnuales/ $salarios.length;
+  
+    return promedioSalariosAnuales/12;
+
+  }
 
 
 

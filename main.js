@@ -289,7 +289,7 @@ $botonSiguienteDos.onclick = function(event){
             $mayorSalarioAnual.textContent = 'El mayor salario anual es ' + calcularMayorSalarioAnual(salariosAnuales);
             $menorSalarioAnual.textContent = 'El menor salario anual es ' + calcularMenorSalarioAnual(salariosAnuales);
             $salarioAnualPromedio.textContent = 'El salario anual promedio es ' + calcularSalarioAnualPromedio(salariosAnuales);
-
+            $salarioMensualPromedio.textContent = 'El salario mensual promedio es ' + calcularSalarioMensualPromedio(salariosAnuales);
 
 
         }
