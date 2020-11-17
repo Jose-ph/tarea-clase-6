@@ -230,12 +230,21 @@ function redireccionar (){
     return window.location.href = "https://argentinaprograma.com/";
  }
 
+ function mostrarBotonCalcularSalario(){
+
+    let $botonQuitar = document.querySelector('#boton-quitar');
+    
+    $botonQuitar.className = "";
+
+
+ }
 
 $botonSiguienteDos.onclick = function(event){
 
     let $respuestaUsuario = document.querySelector('#respuesta').value;
     let $botonAgregar = document.querySelector('#boton-agregar');
     let $botonQuitar = document.querySelector('#boton-quitar');
+    let $botonCalcularSalario = document.querySelector('#calcular-salario');
     
     let $padre = document.querySelector('#contenedor-trabajadores');
 
@@ -247,6 +256,7 @@ $botonSiguienteDos.onclick = function(event){
 
         mostrarBotonAgregar();
         mostrarBotonQuitar();
+        mostrarBotonCalcularSalario();
 
         $botonAgregar.onclick = function(){
 
