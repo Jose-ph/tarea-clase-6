@@ -76,7 +76,7 @@ function crearIntegrante (indice) {
 function eliminarIntegrantesAnteriores (){
 
 
-     document.querySelector('#integrantes-creados').innerHTML = "";
+    document.querySelector('#integrantes-creados').innerHTML = "";
 
     
 }
