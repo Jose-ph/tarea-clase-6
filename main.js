@@ -1,4 +1,6 @@
 
+
+
 const $botonSiguiente = document.querySelector('#boton-siguiente');
 
 const $botonSiguienteDos = document.querySelector('#boton-siguiente-2');
@@ -172,6 +174,7 @@ function resetear(event){
     ocultarResultados();
     borrarIntegrantes();
     ocultarTrabajadores();
+    ocultarResultadosSalarios();
 
 
 }
@@ -315,4 +318,17 @@ $botonSiguienteDos.onclick = function(event){
 
 
      event.preventDefault();
+}
+
+
+function ocultarResultadosSalarios(){
+
+
+
+    let $resultadosSalarios = document.querySelector('#resultados-salarios');
+
+    $resultadosSalarios.className = "oculto";
+
+
+
 }
