@@ -253,7 +253,7 @@ $botonSiguienteDos.onclick = function(event){
 
     
 
-    if ($respuestaUsuario === 'si'){
+    if ($respuestaUsuario.toLowerCase() === 'si'){
 
         console.log('La respuesta fue SI');
 
@@ -296,7 +296,7 @@ $botonSiguienteDos.onclick = function(event){
 
 
         }
-    } else if($respuestaUsuario === 'no'){
+    } else if($respuestaUsuario.toLowerCase() === 'no'){
 
         alert('Quizás te interese el siguiente curso. Presiona Aceptar y serás redireccionado a la página')
 
