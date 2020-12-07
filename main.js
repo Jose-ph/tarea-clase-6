@@ -273,13 +273,18 @@ $botonSiguienteDos.onclick = function(event){
 
             $padre.appendChild(crearLabelSalario(indiceSalarioIntegrante));
 
-            indiceSalarioIntegrante = 0;
+            
 
         }
+
+        
+
 
         $botonQuitar.onclick = function(){
 
             let $nuevoLabel = document.querySelector('#etiqueta');
+
+            indiceSalarioIntegrante = 0;
 
             $padre.removeChild($nuevoLabel);
         }
