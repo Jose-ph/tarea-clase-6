@@ -35,7 +35,7 @@ $botonSiguiente.onclick = function(event){
 
     }
 
-   
+   validarCantidadDeIntegrantes(indiceIntegrante);
 
     event.preventDefault();
 
@@ -343,6 +343,24 @@ function ocultarResultadosSalarios(){
 }
 
 function validarCantidadDeIntegrantes(integrantes){
+
+    let $indiceIntegrantes = integrantes;
+
+    if ($indiceIntegrantes.length === ""){
+
+        console.log("Este campo no puede estar vacio");
+    }
+
+    else if($indiceIntegrantes === 0){
+
+        console.log("Este campo no puede valer 0");
+
+    }
+
+    else if($indiceIntegrantes >30){
+
+        console.log("El valor máximo de este campo es 30");
+    }
 
 
 
