@@ -201,15 +201,15 @@ function mostrarBotonQuitar(){
 }
 
 
-function crearLabelSalario(){
+function crearLabelSalario(indice){
 
-    
+    let $indice= indice;
 
     let $nuevoLabel = document.createElement('label');
 
     $nuevoLabel.setAttribute('id', 'etiqueta');
 
-    $nuevoLabel.innerText = 'Ingrese el salario anual del integrante';
+    $nuevoLabel.innerText = 'Ingrese el salario anual del integrante ' + $indice;
 
     let $inputSalario = document.createElement('input');
 
@@ -260,16 +260,20 @@ $botonSiguienteDos.onclick = function(event){
         mostrarBotonAgregar();
         mostrarBotonQuitar();
         mostrarBotonCalcularSalario();
+        // indice para los salarios quiero que sea Ingrese salario integrante N° + indice
+        let indiceSalarioIntegrante = 0 ;
 
         $botonAgregar.onclick = function(){
 
+
+            indiceSalarioIntegrante ++;
             
 
-            crearLabelSalario();
+            //crearLabelSalario();
 
-            $padre.appendChild(crearLabelSalario());
+            $padre.appendChild(crearLabelSalario(indiceSalarioIntegrante));
 
-
+            indiceSalarioIntegrante = 0;
 
         }
 
@@ -328,6 +332,16 @@ function ocultarResultadosSalarios(){
     let $resultadosSalarios = document.querySelector('#resultados-salarios');
 
     $resultadosSalarios.className = "oculto";
+
+
+
+}
+
+function validarCantidadDeIntegrantes(integrantes){
+
+
+
+
 
 
 
