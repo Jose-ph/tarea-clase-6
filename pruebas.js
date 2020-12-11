@@ -13,7 +13,7 @@ console.assert(
 
     validarCantidadDeIntegrantes("asjdkljaldlsak") === "Este campo solo puede tener números",
 
-    "validarCantidadDeIntegrantes no validó que el campo solo contenga letras",
+    "validarCantidadDeIntegrantes no validó que el campo solo contenga números",
 
 
 
