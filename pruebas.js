@@ -1,20 +1,25 @@
-function probarCalcularMayorEdad(){
-    let edades = [12,15,28,30];
-    console.assert(
+function probarValidarCantidadDeIntegrantes(){
 
-        
+/*console.assert(
 
-        calcularMayorEdad(edades) === " ",
+    validarCantidadDeIntegrantes("0") === "Este campo no puede estar vacio",
 
-        "calcularMayorEdad no pudo calcular",
+    "validarCantidadDeIntegrantes no validó que el campo no esté vacío"
 
 
+);*/
+
+console.assert(
+
+    validarCantidadDeIntegrantes("asjdkljaldlsak") === "Este campo solo puede tener números",
+
+    "validarCantidadDeIntegrantes no validó que el campo solo contenga letras",
 
 
 
-    );
+);
 
 
 }
 
-
+probarValidarCantidadDeIntegrantes();
