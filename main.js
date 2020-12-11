@@ -20,22 +20,28 @@ $botonSiguiente.onclick = function(event){
     let numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
     let indiceIntegrante = 0
 
+    validarCantidadDeIntegrantes(numeroIntegrantes);
+
     eliminarIntegrantesAnteriores();
+
+
+    
 
      while (indiceIntegrante < numeroIntegrantes) {
 
+       
+       
         indiceIntegrante++          
          
          $divPadre.appendChild(crearIntegrante(indiceIntegrante));
          
     }
 
-    if (indiceIntegrante > 0){
+    if (indiceIntegrante > 0 ){ // por aca poner la validacion para q no pueda agregar integrantes
     mostrarBotonCalcular();
 
     }
 
-   validarCantidadDeIntegrantes(indiceIntegrante);
 
     event.preventDefault();
 
@@ -260,7 +266,7 @@ $botonSiguienteDos.onclick = function(event){
         mostrarBotonAgregar();
         mostrarBotonQuitar();
         mostrarBotonCalcularSalario();
-        // indice para los salarios quiero que sea Ingrese salario integrante N° + indice
+        // indice para los salarios quiero que sea,  Ingrese salario integrante N° + indice
         let indiceSalarioIntegrante = 0 ;
 
         $botonAgregar.onclick = function(){
@@ -307,7 +313,7 @@ $botonSiguienteDos.onclick = function(event){
         }
     } else if($respuestaUsuario.toLowerCase() === 'no'){
 
-        alert('Quizás te interese el siguiente curso. Presiona Aceptar y serás redireccionado a la página')
+        alert('Quizás te interese aprender a programar ! . Presiona Aceptar y serás redireccionado a la página')
 
         
 
@@ -346,24 +352,32 @@ function validarCantidadDeIntegrantes(integrantes){
 
     let $indiceIntegrantes = integrantes;
 
-    if ($indiceIntegrantes.length === ""){
+    let contieneSoloNumeros = /^[0-9]+$/i.test($indiceIntegrantes);
+
+   
+     if ($indiceIntegrantes === "0"){
 
         console.log("Este campo no puede estar vacio");
     }
 
-    else if($indiceIntegrantes === 0){
+   
 
-        console.log("Este campo no puede valer 0");
+    else if($indiceIntegrantes > 30){
 
-    }
 
-    else if($indiceIntegrantes >30){
 
         console.log("El valor máximo de este campo es 30");
+
+        
+
     }
 
+    else if( !contieneSoloNumeros){
 
+        console.log("Este campo solo puede tener números");
+    }
 
+    
 
 
 
