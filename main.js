@@ -355,7 +355,7 @@ function validarCantidadDeIntegrantes(integrantes){
     let contieneSoloNumeros = /^[0-9]+$/i.test($indiceIntegrantes);
 
    
-     if ($indiceIntegrantes === "0"){
+     if ($indiceIntegrantes.length === "0"){
 
         console.log("Este campo no puede estar vacio");
     }
