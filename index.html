@@ -16,17 +16,21 @@
 
 
 
-<body id="principal">
+<body id="principal"  class="needs-validation" novalidate  >
 
 
     <form  id="formulario">
 
-
+      <!-- 
         <label for="Integrantes">Ingresar cantidad integrantes del grupo familiar</label>
         <input id="numero-integrantes" type="number" min="0">
 
         <button type="submit" id="boton-siguiente"> Siguiente</button>
         <button type="button" id="boton-resetear">Resetear</button>
+    
+
+
+       
 
 
         <div id="integrantes-creados">
@@ -74,11 +78,112 @@
             <p id="promedio-salario-mensual">  </p>
 
 
+        </div>                  -->
+
+
+
+        <div class="mb-3">
+            <label for="Integrantes">Ingresar cantidad integrantes del grupo familiar</label>
+            <input id="numero-integrantes" type="number" min="0">
+            <button type="submit" id="boton-siguiente" class="btn btn-primary"> Siguiente</button>
+            <button type="button" id="boton-resetear" class="btn btn-danger">Resetear</button>
+            <input type="button" value="Calcular" id="boton-calcular" class="oculto">
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+
+          </div>
+          
+          <div class="mb-3"  id="integrantes-creados" >
+            
+
+           
+           
+
+
+            
+          </div>
+
+
+
+
+          <div class="oculto"  id="contenedor-resultados">
+
+
+            <p id="mayor"> La mayor edad es: </p>
+
+            <p id="menor"> La menor edad es: </p>
+
+            <p id="promedio"> El promedio de edad familiar es de: </p>
+
+
+           
+
+            
         </div>
 
+          <div class="oculto"  id="contenedor-trabajadores">
+
+            <label for="trabajadores">¿Tienen trabajo? </label>
+            <input id="respuesta" type="text" >
+            <button type="submit" id="boton-siguiente-2" class="btn btn-primary"> Siguiente</button>
+            <button type="button" id="boton-agregar" class="oculto">Agregar Salario Anual</button>
+            <button type="button" id="boton-quitar" class="oculto"> Quitar Salario Anual</button>
+            <button type="button" id="calcular-salario" class="oculto"> Calcular</button>
+            
+        </div>
+
+        <div class="mb-3"  id="resultado-salarios">
+
+            <p id="mayor-salario-anual">  </p>
+
+            <p id="menor-salario-anual">  </p>
+
+            <p id="promedio-salario-anual"> </p>
+
+            <p id="promedio-salario-mensual">  </p>
+
+            
+        </div>
+
+        
 
 
-    </form>
+
+
+
+
+
+
+
+        
+
+
+    </form>   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

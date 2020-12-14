@@ -20,7 +20,7 @@ $botonSiguiente.onclick = function(event){
     let numeroIntegrantes = Number(document.querySelector('#numero-integrantes').value)
     let indiceIntegrante = 0
 
-    validarCantidadDeIntegrantes(numeroIntegrantes);
+    
 
     eliminarIntegrantesAnteriores();
 
@@ -92,7 +92,7 @@ function mostrarBotonCalcular (evento){
 
     const $botonCalcular = document.querySelector('#boton-calcular');
 
-    $botonCalcular.className = "";
+    $botonCalcular.className = "btn btn-dark";
 
 
 } 
@@ -102,14 +102,14 @@ function mostrarResultados(){
 
     const $contenedorResultados = document.querySelector('#contenedor-resultados');
 
-    $contenedorResultados.className = "";
+    $contenedorResultados.className = "mb-3";
 }
 
 function mostrarTrabajadores(){
 
     let $contenedorTrabajaores = document.querySelector('#contenedor-trabajadores');
 
-    $contenedorTrabajaores.className= "";
+    $contenedorTrabajaores.className= "mb-3";
 }
 
 function ocultarTrabajadores(){
@@ -193,7 +193,7 @@ function mostrarBotonAgregar(){
 
     let $botonAgregar = document.querySelector('#boton-agregar');
 
-    $botonAgregar.className = "";
+    $botonAgregar.className = "btn btn-secondary";
 
 
 }
@@ -202,7 +202,7 @@ function mostrarBotonQuitar(){
 
     let $botonQuitar = document.querySelector('#boton-quitar');
     
-    $botonQuitar.className = "";
+    $botonQuitar.className = "btn btn-secondary";
 
 }
 
@@ -243,7 +243,7 @@ function redireccionar (){
 
     let $botonCalcularSalario = document.querySelector('#calcular-salario');;
     
-    $botonCalcularSalario.className = "";
+    $botonCalcularSalario.className = "btn btn-secondary";
 
 
  }
