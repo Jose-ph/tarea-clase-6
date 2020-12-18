@@ -4,6 +4,12 @@
 
 
 }
+.principal {
+
+   background-image: url('https://cdn.pixabay.com/photo/2017/04/05/04/44/background-2203989_960_720.jpg');
+  
+}
+
 
 /*#integrantes-creados {
 
@@ -18,11 +24,7 @@
 
 
 
- #principal {
-
-    background-color: lightblue;
- }
-
+ 
 
  #etiqueta{
 

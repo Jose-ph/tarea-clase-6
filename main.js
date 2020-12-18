@@ -55,7 +55,7 @@ function crearIntegrante (indice) {
 
     let nuevoLabel = document.createElement('label');
 
-    nuevoLabel.setAttribute('class', 'etiqueta')
+    nuevoLabel.setAttribute('class', 'etiqueta d-table')
 
     nuevoLabel.innerText = 'Ingrese la edad del integrante N°' + indiceDeIntegrante;
 
@@ -63,7 +63,7 @@ function crearIntegrante (indice) {
 
     nuevoInput.setAttribute('type', 'number');
     nuevoInput.setAttribute('min', '0');
-    nuevoInput.setAttribute ('class', 'integrante');
+    nuevoInput.setAttribute ('class', 'integrante border border-dark mt-1');
     
 
     
@@ -214,6 +214,7 @@ function crearLabelSalario(indice){
     let $nuevoLabel = document.createElement('label');
 
     $nuevoLabel.setAttribute('id', 'etiqueta');
+    $nuevoLabel.setAttribute('class', 'd-block')
 
     $nuevoLabel.innerText = 'Ingrese el salario anual del integrante ' + $indice;
 
@@ -221,7 +222,7 @@ function crearLabelSalario(indice){
 
 
     $inputSalario.setAttribute ('type' , 'number');
-    $inputSalario.setAttribute('class' , 'salario');
+    $inputSalario.setAttribute('class' , 'salario border border-dark mt-1');
     $inputSalario.setAttribute('min' , '0');
 
     $nuevoLabel.appendChild($inputSalario);
