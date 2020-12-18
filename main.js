@@ -246,10 +246,9 @@ function redireccionar (){
     
     $botonCalcularSalario.className = "btn btn-secondary";
 
-
  }
 
-$botonSiguienteDos.onclick = function(event){
+ $botonSiguienteDos.onclick = function(event){
 
     let $respuestaUsuario = document.querySelector('#respuesta').value;
     let $botonAgregar = document.querySelector('#boton-agregar');
@@ -351,12 +350,13 @@ function ocultarResultadosSalarios(){
 
 function validarCantidadDeIntegrantes(integrantes){
 
+
     let $indiceIntegrantes = integrantes;
 
-    let contieneSoloNumeros = /^[0-9]+$/i.test($indiceIntegrantes);
+    let contieneSoloNumeros = /^[0-9]\s+$/i.test($indiceIntegrantes);
 
    
-     if ($indiceIntegrantes.length === "0"){
+     if ($indiceIntegrantes === "0"){
 
         console.log("Este campo no puede estar vacio");
     }
@@ -384,3 +384,34 @@ function validarCantidadDeIntegrantes(integrantes){
 
 
 }
+
+function validarEdadesIntegrantes(edades){
+
+    let $edades = edades;
+
+
+    for (i=0 ; i<$edades.length ; i++){
+
+        if ($edades[i] < 0){
+
+            console.log("No puede haber edad negativa");
+
+        }
+
+        else if ($edades[i] >= 122 ){
+
+            console.log("La persona más longeva del mundo tiene 122 años, verifica podrías ser un nuevo record mundial ");
+        }
+   
+     }
+
+     return "";
+}
+
+
+
+
+
+
+   
+
