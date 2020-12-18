@@ -341,7 +341,7 @@ function ocultarResultadosSalarios(){
 
 
 
-    let $resultadosSalarios = document.querySelector('#resultados-salarios');
+    let $resultadosSalarios = document.querySelector('#resultado-salarios');
 
     $resultadosSalarios.className = "oculto";
 
