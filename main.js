@@ -402,10 +402,12 @@ function validarEdadesIntegrantes(edades){
 
             console.log("La persona más longeva del mundo tiene 122 años, verifica podrías ser un nuevo record mundial ");
         }
-   
+        else {
+            console.log("edad correcta");
+        }
      }
 
-     return "";
+     
 }
 
 
