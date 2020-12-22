@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>r/argentina-programa Tarea clase 6</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+
+</head>
+
+
+
+<body id="principal" class="principal"  >
+
+
+    <form  id="formulario">
+
+      <!-- 
+        <label for="Integrantes">Ingresar cantidad integrantes del grupo familiar</label>
+        <input id="numero-integrantes" type="number" min="0">
+
+        <button type="submit" id="boton-siguiente"> Siguiente</button>
+        <button type="button" id="boton-resetear">Resetear</button>
+    
+
+
+       
+
+
+        <div id="integrantes-creados">
+
+
+
+
+        </div>
+
+        <input type="button" value="Calcular" id="boton-calcular" class="oculto">
+
+        <div id="contenedor-resultados" class="oculto">
+
+
+            <p id="mayor"> La mayor edad es: </p>
+
+            <p id="menor"> La menor edad es: </p>
+
+            <p id="promedio"> El promedio de edad familiar es de: </p>
+
+
+
+
+        </div>
+
+        <div id="contenedor-trabajadores"  class="oculto">
+
+            <label for="trabajadores">¿Tienen trabajo? </label>
+            <input id="respuesta" type="text" >
+            <button type="submit" id="boton-siguiente-2"> Siguiente</button>
+            <button type="button" id="boton-agregar" class="oculto">Agregar Salario Anual</button>
+            <button type="button" id="boton-quitar" class="oculto"> Quitar Salario Anual</button>
+            <button type="button" id="calcular-salario" class="oculto"> Calcular</button>
+
+        </div>
+
+        <div id="resultados-salarios">
+
+            <p id="mayor-salario-anual">  </p>
+
+            <p id="menor-salario-anual">  </p>
+
+            <p id="promedio-salario-anual"> </p>
+
+            <p id="promedio-salario-mensual">  </p>
+
+
+        </div>                  -->
+
+
+
+        <div class="mb-3">
+            <label for="Integrantes" class=""> <strong>Ingresar cantidad integrantes del grupo familiar</strong> </label>
+            <input id="numero-integrantes" type="number" min="0">
+            <button type="submit" id="boton-siguiente" class="btn btn-primary"> Siguiente</button>
+            <button type="button" id="boton-resetear" class="btn btn-danger">Resetear</button>
+            <input type="button" value="Calcular" id="boton-calcular" class="oculto">
+            
+
+          </div>
+          
+          <div class="mb-3 text-justify"  id="integrantes-creados" >
+            
+
+           
+           
+
+
+            
+          </div>
+
+
+
+
+          <div class="oculto"  id="contenedor-resultados">
+
+
+            <p id="mayor"> La mayor edad es: </p>
+
+            <p id="menor"> La menor edad es: </p>
+
+            <p id="promedio"> El promedio de edad familiar es de: </p>
+
+
+           
+
+            
+        </div>
+
+          <div class="oculto"  id="contenedor-trabajadores">
+
+            <label for="trabajadores">¿Tienen trabajo? </label>
+            <input id="respuesta" type="text" >
+            <button type="submit" id="boton-siguiente-2" class="btn btn-primary"> Siguiente</button>
+            <button type="button" id="boton-agregar" class="oculto">Agregar Salario Anual</button>
+            <button type="button" id="boton-quitar" class="oculto"> Quitar Salario Anual</button>
+            <button type="button" id="calcular-salario" class="oculto"> Calcular</button>
+            
+        </div>
+
+        <div   id="resultado-salarios" class="mb-3">
+
+            <p id="mayor-salario-anual">  </p>
+
+            <p id="menor-salario-anual">  </p>
+
+            <p id="promedio-salario-anual"> </p>
+
+            <p id="promedio-salario-mensual">  </p>
+
+            
+        </div>
+
+        
+
+
+
+
+
+
+       
+
+
+        
+
+
+    </form>   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src='main.js'></script>
+    <script src="calculos.js"></script>
+    <script src="pruebas.js"></script>
+
+</body>
+
+
+</html>
