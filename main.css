@@ -1,0 +1,32 @@
+*{
+    background-color: whitesmoke;
+
+}
+
+form{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.family-member{
+
+    display: flex;
+    flex-direction: column;
+}
+button {
+
+    margin-top: 3%;
+    border: 5px solid blue;
+}
+input{
+    background-color: wheat;
+}
+
+.d-none{
+
+    display: none;
+    background-color: yellowgreen;
+}
+
+
