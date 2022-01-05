@@ -10,6 +10,7 @@ const $addSalaryButton = document.querySelector('#btn-add-salary');
 const $removeSalaryButton = document.querySelector('#btn-remove-salary');
 
 const $calculateSalariesButton = document.querySelector('#calculate-salaries');
+const $results = document.querySelector('#resultados');
 
 $addSalaryButton.onclick = function(e){
 
@@ -45,7 +46,10 @@ $calculateSalariesButton.onclick = function(){
     console.log(calculateAverageAnnualSalary(annualSalaries));
 
     showSalaries("mayor", calculatehigherSalary(annualSalaries));
+    showSalaries("menor", calculateLowerSalary(annualSalaries));
+    showSalaries("promedio", calculateAverageAnnualSalary(annualSalaries));
 
+    $results.className = ""
 
 }
 
