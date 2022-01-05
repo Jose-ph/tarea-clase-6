@@ -2,3 +2,15 @@
     background-color: black;
     color: wheat;
 }
+
+.family-member-salary{
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.d-none {
+
+    display: none;
+}

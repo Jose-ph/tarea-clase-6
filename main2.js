@@ -9,48 +9,103 @@ Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como
 const $addSalaryButton = document.querySelector('#btn-add-salary');
 const $removeSalaryButton = document.querySelector('#btn-remove-salary');
 
-
+const $calculateSalariesButton = document.querySelector('#calculate-salaries');
 
 $addSalaryButton.onclick = function(e){
 
     
 
     createInput();
+
+   
+    
    
 }
 
-function createInputs(number){
+$removeSalaryButton.onclick = function(){
 
-    for(let i = 0 ; i <number ; i++){
+    erasePreviousInputs();
+}
 
-        const $calculateAgesForm = document.querySelector("#calculate-salary-form");
-      
+$calculateSalariesButton.onclick = function(){
 
+    const $annualSalaries = document.querySelectorAll('.family-member-salary')
+    
+    let annualSalaries = []
 
-        let newInput = document.createElement('input');
-        let newLabel = document.createElement('label');
+    for(let i = 0 ; i< $annualSalaries.length; i++){
 
-        newLabel.setAttribute('for', `${i}`);
-
-        newLabel.setAttribute('class', `family-member`);
-
-        newLabel.textContent = `Por favor ingrese el salario anual -N° ${i+1}`
-
-        newInput.setAttribute('type','number');
-        newInput.setAttribute( 'id',`${i}`);
-        newInput.setAttribute('class','family-member-salary');
-        newInput.setAttribute('min','0');
-
-        $calculateAgesForm.appendChild(newLabel);
-        $calculateAgesForm .appendChild(newInput);
+        annualSalaries.push( Number(  $annualSalaries[i].value));
         
-
+        
     }
 
-    
+    console.log(calculatehigherSalary(annualSalaries));
+    console.log(calculateLowerSalary(annualSalaries));
+    console.log(calculateAverageAnnualSalary(annualSalaries));
+
+    showSalaries("mayor", calculatehigherSalary(annualSalaries));
+
 
 }
 
+function calculatehigherSalary(salaries){
+
+
+    let higherSalary = 0 ;
+
+    for(let i = 0 ; i<salaries.length ; i++){
+
+        if(salaries[i] > higherSalary){
+
+            higherSalary = salaries[i];
+        }
+
+    }
+
+    return higherSalary;
+
+
+}
+
+
+
+function calculateLowerSalary(salaries){
+
+
+    let lowerSalary = salaries[0] ;
+
+    for(let i = 0 ; i<salaries.length ; i++){
+
+        if(salaries[i] < lowerSalary){
+
+            lowerSalary = salaries[i];
+        }
+
+    }
+
+    return lowerSalary;
+
+
+}
+
+
+function calculateAverageAnnualSalary(salaries){
+
+
+    let counter = 0;
+
+    for(let i = 0 ; i<salaries.length ; i++){
+
+        counter += salaries[i]
+
+    }
+
+    let averageAnnualSalary = counter/salaries.length
+
+    return averageAnnualSalary;
+
+}
 
 function createInput(){
 
@@ -65,7 +120,7 @@ function createInput(){
 
     newLabel.setAttribute('class', `family-member`);
 
-    newLabel.textContent = `Por favor ingrese el salario anual -N° `
+    newLabel.textContent = `Por favor ingrese el salario anual: `
 
     newInput.setAttribute('type','number');
     
@@ -87,4 +142,13 @@ function erasePreviousInputs(){
         inputs[i].remove()
         labels[i].remove()
     }
+}
+
+
+function showSalaries (type, value){
+
+    document.querySelector(`.${type}-salario-anual`). textContent += " " + value;
+
+
+
 }
