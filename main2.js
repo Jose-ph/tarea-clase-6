@@ -33,9 +33,14 @@ $removeSalaryButton.onclick = function(){
 
 $calculateSalariesButton.onclick = function(){
 
+
+
     const $annualSalaries = document.querySelectorAll('.family-member-salary')
     
     let annualSalaries = []
+    
+    
+    
 
     for(let i = 0 ; i< $annualSalaries.length; i++){
 
@@ -44,15 +49,26 @@ $calculateSalariesButton.onclick = function(){
         
     }
 
-    
 
+    console.log(annualSalaries);
+    
+    if(annualSalaries.length === 0 ){
+
+        alert("Agrega salarios para calcular")
+    }
+
+    else {
     showSalaries("mayor", calculatehigherSalary(annualSalaries));
     showSalaries("menor", calculateLowerSalary(annualSalaries));
     showSalaries("promedio", calculateAverageAnnualSalary(annualSalaries));
 
+    /*eliminar salarios anteriores */
+
     document.querySelector('.promedio-salario-mensual').textContent += `${calculateAverageMonthlySalary(annualSalaries)}`
 
     $results.className = ""
+
+    }
 
 }
 
