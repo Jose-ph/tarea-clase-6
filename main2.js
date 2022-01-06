@@ -26,6 +26,9 @@ $addSalaryButton.onclick = function(e){
 $removeSalaryButton.onclick = function(){
 
     erasePreviousInputs();
+    
+
+    hideResults();
 }
 
 $calculateSalariesButton.onclick = function(){
@@ -41,15 +44,42 @@ $calculateSalariesButton.onclick = function(){
         
     }
 
-    console.log(calculatehigherSalary(annualSalaries));
-    console.log(calculateLowerSalary(annualSalaries));
-    console.log(calculateAverageAnnualSalary(annualSalaries));
+    
 
     showSalaries("mayor", calculatehigherSalary(annualSalaries));
     showSalaries("menor", calculateLowerSalary(annualSalaries));
     showSalaries("promedio", calculateAverageAnnualSalary(annualSalaries));
 
+    document.querySelector('.promedio-salario-mensual').textContent += `${calculateAverageMonthlySalary(annualSalaries)}`
+
     $results.className = ""
+
+}
+
+
+function calculateAverageMonthlySalary(salaries){
+
+
+let counter = 0;
+
+    for(let i = 0 ; i<salaries.length ; i++){
+
+        counter += salaries[i]
+
+    }
+
+    let totalMonthlySalary = counter/12;
+
+    let averageMonthlySalary = totalMonthlySalary/salaries.length;
+
+    return averageMonthlySalary;
+
+
+}
+
+function hideResults(){
+
+    $results.className = "results d-none"
 
 }
 
