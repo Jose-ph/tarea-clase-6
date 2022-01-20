@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Tarea Clase 6</title>
 </head>
 <body>
 
-    <h1>Esta es la tarea de la clase 6</h1>
+    <div class="container"> 
+        
+        <div class="row">
+
+        <div class="col-6">  <h1>Esta es la tarea de la clase 6</h1>   </div>
+       
+
+        </div>
+    
+    
+    </div>
 
 
-    <form id="calculate-ages" action="">
+    <form class="container" id="calculate-ages" action="">
 
-        <label for="family-members">Ingrese la cantidad de integrantes</label>
-        <input type="number" min="0" id="family-members"/>
+        <div class="row"> 
+            
+            <label class="col-3 mx-1" for="family-members">Ingrese la cantidad de integrantes</label>
+            <input class="col-3 mx-1" type="number" min="0" id="family-members"/>
+    
+    
+            <button class="col mx-1 btn btn btn-primary"  type="submit" id="next">Siguiente</button>
+    
+            <button class="col mx-1 btn btn-secondary "  type="button" id="calculate-btn" class="d-none">Calcular</button>
+    
+            <button class="col mx-1 btn btn-danger"  type="reset"  id="reset-btn"  >Resetear</button>
+    
+        
+        
+        
+        
+        </div>
 
-
-        <button type="submit" id="next">Siguiente</button>
-
-        <button type="button" id="calculate-btn" class="d-none">Calcular</button>
-
-        <button type="reset"  id="reset-btn"  >Resetear</button>
-
+      
 
 
         
