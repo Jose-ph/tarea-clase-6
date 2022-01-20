@@ -1,0 +1,22 @@
+{
+  "name": "tarea-clase-6",
+  "version": "1.0.0",
+  "description": "Esta es la tarea de la clase 6, pero agregando estilos como se pide en la tarea de la clase 10",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jose-ph/tarea-clase-6.git"
+  },
+  "author": "Jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jose-ph/tarea-clase-6/issues"
+  },
+  "homepage": "https://github.com/Jose-ph/tarea-clase-6#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
